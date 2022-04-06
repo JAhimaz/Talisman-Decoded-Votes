@@ -67,9 +67,12 @@ export default function VotesPoller() {
             {loading ? (
                 <a>Fetching Votes...</a>
             ):(
-                talismanData.map((talisman) => 
+                <>
+                <a className='timestamp'>Last updated : <span className="highlight">{new Date(timestamp).toLocaleTimeString("en-US")} {new Date(timestamp * 1000).toLocaleDateString("en-US")}</span></a>
+                {talismanData.map((talisman) => 
                     <VoteCount talismanMember={talisman} position={getIndexOf(talisman)}/>
-                )
+                )}
+                </>
             )}
         </>
     )

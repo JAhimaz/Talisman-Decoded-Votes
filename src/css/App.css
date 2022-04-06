@@ -26,3 +26,15 @@
 .App-link {
   color: #61dafb;
 }
+
+.Vote-btn {
+  background-color: #FF4642;
+  border: 0;
+  font-family: 'Surt';
+  color: rgb(245, 245, 245);
+  width: 10em;
+  height: 2em;
+  border-radius: 10px;
+  font-size: 1em;
+  margin-bottom: 1em;
+}

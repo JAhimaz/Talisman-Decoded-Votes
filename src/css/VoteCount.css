@@ -9,6 +9,11 @@
     text-align: left;
 }
 
+.timestamp {
+    font-size: 0.55em;
+    margin-bottom: 1em;
+}
+
 .title {
     font-size: 1.25em;
     line-height: 1.5em;

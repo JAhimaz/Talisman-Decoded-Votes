@@ -10,6 +10,7 @@ function App() {
         <p>
           Talisman Votes <span className="App-header-sub">(Polkadot Decoded)</span>
         </p>
+        <button onClick={() => {window.location.href="https://decoded.polkadot.network/vote/?search=Talisman"}} className='Vote-btn'>Vote Now</button>
         <VotesPoller />
       </header>
     </div>
