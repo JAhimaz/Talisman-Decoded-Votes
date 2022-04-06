@@ -1,0 +1,44 @@
+.card-body {
+    background-color: rgb(27, 27, 27);
+    padding: 0.5em 2em;
+    border-radius: 10px;
+    line-height: 1em;
+    margin-bottom: 0.5em;
+    font-size: 0.65em;
+    width: 70%;
+    text-align: left;
+}
+
+.title {
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+.highlight {
+    color: #FF4642;
+}
+
+@media only screen and (min-width: 768px) {
+    .card-body {
+    
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .card-body {
+    
+
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .card-body {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .card-body {
+    
+    }
+}
