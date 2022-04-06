@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Talisman-Decoded-Votes/static/css/main.75a9e997.css",
-    "main.js": "/Talisman-Decoded-Votes/static/js/main.3bb1ad6f.js",
+    "main.css": "/Talisman-Decoded-Votes/static/css/main.b40c5197.css",
+    "main.js": "/Talisman-Decoded-Votes/static/js/main.70cbe4f0.js",
     "static/js/787.2f6aa0a8.chunk.js": "/Talisman-Decoded-Votes/static/js/787.2f6aa0a8.chunk.js",
     "static/media/logo.gif": "/Talisman-Decoded-Votes/static/media/logo.be2bb7d044eb2d3c22a5.gif",
     "static/media/Surt-Regular.woff": "/Talisman-Decoded-Votes/static/media/Surt-Regular.60846d632cfb93a31830.woff",
     "index.html": "/Talisman-Decoded-Votes/index.html",
-    "main.75a9e997.css.map": "/Talisman-Decoded-Votes/static/css/main.75a9e997.css.map",
-    "main.3bb1ad6f.js.map": "/Talisman-Decoded-Votes/static/js/main.3bb1ad6f.js.map",
+    "main.b40c5197.css.map": "/Talisman-Decoded-Votes/static/css/main.b40c5197.css.map",
+    "main.70cbe4f0.js.map": "/Talisman-Decoded-Votes/static/js/main.70cbe4f0.js.map",
     "787.2f6aa0a8.chunk.js.map": "/Talisman-Decoded-Votes/static/js/787.2f6aa0a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75a9e997.css",
-    "static/js/main.3bb1ad6f.js"
+    "static/css/main.b40c5197.css",
+    "static/js/main.70cbe4f0.js"
   ]
 }
