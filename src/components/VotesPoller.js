@@ -65,7 +65,13 @@ export default function VotesPoller() {
     return (
         <>
             {loading ? (
-                <a>Fetching Votes...</a>
+                <div className="card">
+                    
+                    <div className='card-line'></div>
+                    <div className='card-line-top'></div>
+                    <div className='card-line-top'></div>
+                    <div className='card-line-top'></div>
+                </div>
             ):(
                 <>
                 <a className='timestamp'>Last updated : <span className="highlight">{new Date(timestamp).toLocaleTimeString("en-US")} {new Date(timestamp * 1000).toLocaleDateString("en-US")}</span></a>

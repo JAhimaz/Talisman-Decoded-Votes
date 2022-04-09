@@ -27,7 +27,14 @@
   color: #61dafb;
 }
 
+a {
+  text-decoration: none;
+}
+
 .Vote-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #FF4642;
   border: 0;
   font-family: 'Surt';
@@ -37,4 +44,11 @@
   border-radius: 10px;
   font-size: 1em;
   margin-bottom: 1em;
+  cursor:pointer;
+
+  transition: background-color 100ms linear;
+}
+
+.Vote-btn:hover {
+  background-color: #ca2c29;
 }

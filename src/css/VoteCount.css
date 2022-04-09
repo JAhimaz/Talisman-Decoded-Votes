@@ -23,6 +23,49 @@
     color: #FF4642;
 }
 
+.card {
+    background-color: rgb(27, 27, 27);
+    width: 30%;
+    height: 150px;
+    border-radius: 10px;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-line-top {
+    height: 20px;
+    width: 30%;
+    border-radius: 10px;
+    /* background-color: rgb(44, 44, 44); */
+}
+
+.card-line {
+    height: 20px;
+    width: 100%;
+    border-radius: 10px;
+    /* background-color: rgb(44, 44, 44); */
+}
+
+.card-line-top, .card-line, .card-line::before, .card-line-top::before {
+    background: rgb(44,44,44);
+    background: linear-gradient(-90deg, rgba(44,44,44,1) 0%, rgba(0,0,0,0.05) 100%); 
+    background-size: 450px 400px;
+    background-repeat: no-repeat;
+    animation: shimmer 0.8s linear infinite;
+}
+
+@keyframes shimmer {
+    0%{
+        background-position: -450px 0;
+    }
+
+    100%{
+        background-position: 450px 0;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .card-body {
     
