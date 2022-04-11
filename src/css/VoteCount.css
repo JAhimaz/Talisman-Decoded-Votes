@@ -7,6 +7,7 @@
     font-size: 0.65em;
     width: 70%;
     text-align: left;
+    position: relative;
 }
 
 .timestamp {
@@ -15,7 +16,7 @@
 }
 
 .title {
-    font-size: 1.25em;
+    font-size: 1em;
     line-height: 1.5em;
 }
 
@@ -23,38 +24,21 @@
     color: #FF4642;
 }
 
-.card {
-    background-color: rgb(27, 27, 27);
-    width: 30%;
-    height: 150px;
-    border-radius: 10px;
-    padding: 1em 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.green-highlight {
+    color: #31f382;
 }
 
-.card-line-top {
-    height: 20px;
-    width: 30%;
-    border-radius: 10px;
-    /* background-color: rgb(44, 44, 44); */
+.Top-list {
+    position: absolute;
+    right: 2em;
+    bottom: 10px;
 }
 
-.card-line {
-    height: 20px;
-    width: 100%;
-    border-radius: 10px;
-    /* background-color: rgb(44, 44, 44); */
+.foreground {
+    color:rgb(77, 77, 77);
+    font-size: 1em;
 }
 
-.card-line-top, .card-line, .card-line::before, .card-line-top::before {
-    background: rgb(44,44,44);
-    background: linear-gradient(-90deg, rgba(44,44,44,1) 0%, rgba(0,0,0,0.05) 100%); 
-    background-size: 450px 400px;
-    background-repeat: no-repeat;
-    animation: shimmer 0.8s linear infinite;
-}
 
 @keyframes shimmer {
     0%{

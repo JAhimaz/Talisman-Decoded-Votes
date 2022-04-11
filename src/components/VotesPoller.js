@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import _ from 'lodash';
+import _, { takeWhile } from 'lodash';
 import VoteCount from './VoteCount';
+
+import '../css/VotesPoller.css'
 
 export default function VotesPoller() {
 
@@ -13,16 +15,6 @@ export default function VotesPoller() {
 
     const checkLocation = (value) => {
         return value.item.attributes.location == "Berlin";
-    }
-
-    const checkForTalisman = (value) => {
-        return value.item.attributes.company == "Talisman";
-    }
-
-    const fetchTalismanData = (datasheet) => {
-        let talData = datasheet.filter(checkForTalisman)
-        console.log(talData)
-        setTalismanData(talData)
     }
 
     const getIndexOf = (taliObj) => {
@@ -51,9 +43,30 @@ export default function VotesPoller() {
             );
             
             setBerlinData(sortedfilteredData);
-            fetchTalismanData(sortedfilteredData);
+            
+            let sortedTalismanData = []
+            
+            sortedfilteredData.forEach((talk, index) => {
+                let nextPosVotes;
+                if(talk.item.attributes.company == "Talisman"){
+                    if(index !== 0){
+                        nextPosVotes = sortedfilteredData[index - 1].count;
+                    }else{
+                        nextPosVotes = 0;
+                    }
 
-            console.log(sortedfilteredData)
+                    sortedTalismanData.push({...talk, index, nextPositionVotes: nextPosVotes })
+                }
+            });
+
+            // sortedTalismanData.forEach(talk => {
+            //     let nextPosVotes = 1;
+            //     talk = {...talk, nextPositionVotes: nextPosVotes}
+            // });
+
+            console.log(sortedTalismanData)
+            setTalismanData(sortedTalismanData)
+
             setLoading(false)
         });
     }
@@ -66,17 +79,17 @@ export default function VotesPoller() {
         <>
             {loading ? (
                 <div className="card">
-                    
                     <div className='card-line'></div>
                     <div className='card-line-top'></div>
                     <div className='card-line-top'></div>
                     <div className='card-line-top'></div>
+                    <div className='card-line-shortlisted'></div>
                 </div>
             ):(
                 <>
                 <a className='timestamp'>Last updated : <span className="highlight">{new Date(timestamp).toLocaleTimeString("en-US")} {new Date(timestamp * 1000).toLocaleDateString("en-US")}</span></a>
                 {talismanData.map((talisman) => 
-                    <VoteCount talismanMember={talisman} position={getIndexOf(talisman)}/>
+                    <VoteCount talismanMember={talisman} key={talisman.item.name}/>
                 )}
                 </>
             )}
